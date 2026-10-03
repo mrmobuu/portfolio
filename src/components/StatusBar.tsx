@@ -94,7 +94,7 @@ export function StatusBar({ session }: { session: string }) {
         aria-label="Sections"
         className="mx-auto flex max-w-[880px] items-center gap-4 px-4 font-mono text-[0.8rem] sm:px-6"
       >
-        <span className="shrink-0 bg-amber px-2 py-0.5 font-medium text-bg">
+        <span className="shrink-0 bg-accent px-2 py-0.5 font-medium text-on-accent">
           [{session}]
         </span>
         <ul

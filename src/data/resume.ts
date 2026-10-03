@@ -85,6 +85,16 @@ export const career: Commit[] = [
 
 export const projects: Project[] = [
   {
+    name: "Portfolio",
+    kind: "This site",
+    slug: "portfolio",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    bullets: [
+      "A static Next.js page styled as a terminal session: career as a git log graph, and a tmux-style.",
+      "All content lives in one typed data file. Light and dark themes, works down to phone width.",
+    ],
+  },
+  {
     name: "Air-Fly",
     kind: "Flight booking platform",
     slug: "air-fly",
@@ -108,16 +118,7 @@ export const projects: Project[] = [
       "Role-based gameplay with synchronized timers, automatic bot assignment for odd-numbered groups, and dashboards tracking individual and class-wide results for students and instructors.",
     ],
   },
-  {
-    name: "Portfolio",
-    kind: "This site",
-    slug: "portfolio",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    bullets: [
-      "A static Next.js page styled as a terminal session: career as a git log graph, and a tmux-style status bar that follows your scroll and responds to 0-5 keyboard shortcuts.",
-      "All content lives in one typed data file. Light and dark themes, works down to phone width, and scores **100** on Lighthouse accessibility, best practices and SEO.",
-    ],
-  },
+
 ];
 
 export const stack: { key: string; items: string[] }[] = [

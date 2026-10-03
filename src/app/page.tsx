@@ -23,7 +23,7 @@ export default function Home() {
     <>
       <a
         href="#main"
-        className="sr-only z-20 bg-amber px-3 py-2 font-mono text-sm text-bg focus:not-sr-only focus:fixed focus:top-2 focus:left-2"
+        className="sr-only z-20 bg-accent px-3 py-2 font-mono text-sm text-on-accent focus:not-sr-only focus:fixed focus:top-2 focus:left-2"
       >
         Skip to content
       </a>

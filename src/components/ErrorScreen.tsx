@@ -40,6 +40,6 @@ export function ErrorScreen({
 }
 
 export const primaryButton =
-  "inline-block bg-amber px-4 py-2.5 text-center font-mono text-sm font-medium text-bg transition-opacity hover:opacity-85";
+  "inline-block bg-accent px-4 py-2.5 text-center font-mono text-sm font-medium text-on-accent transition-opacity hover:opacity-85";
 export const secondaryButton =
   "inline-block border border-rule px-4 py-2.5 text-center font-mono text-sm transition-colors hover:border-teal hover:text-teal";

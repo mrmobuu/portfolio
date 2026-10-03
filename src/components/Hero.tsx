@@ -38,7 +38,7 @@ export function Hero() {
           <a
             href={profile.resume}
             download
-            className="bg-amber px-4 py-2.5 text-center font-medium text-bg transition-opacity hover:opacity-85"
+            className="bg-accent px-4 py-2.5 text-center font-medium text-on-accent transition-opacity hover:opacity-85"
           >
             Download resume (PDF)
           </a>

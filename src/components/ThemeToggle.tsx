@@ -41,7 +41,6 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      aria-label={theme ? `Switch to ${next} theme` : "Switch theme"}
       className="ml-auto flex shrink-0 items-center gap-1.5 px-1.5 py-0.5 text-muted transition-colors hover:text-text"
     >
       <span aria-hidden className="text-amber">
@@ -49,6 +48,9 @@ export function ThemeToggle() {
       </span>
       {/* Fixed width so the bar doesn't shift when the label changes or hydrates. */}
       <span className="inline-block w-[5ch] text-left">{theme ?? ""}</span>
+      {/* Accessible name starts with the visible word ("light theme, switch to dark"),
+          so voice-control users can say what they see. */}
+      <span className="sr-only">{theme ? ` theme, switch to ${next}` : "Switch theme"}</span>
     </button>
   );
 }
