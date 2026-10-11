@@ -26,7 +26,7 @@ export const profile = {
   handle: "adamya",
   role: "Full-stack engineer",
   summary:
-    "I build products end to end, from the first design decision to the thing people use every day. At Pragati Defence I designed and built the company's ERP from scratch: the schema, auth, APIs and the screens people now work in. Before that, three years at ZS Associates doing the same at team scale, re-architecting services, designing dashboards and leading teams through delivery.",
+    "I build products end to end, from the first design decision to the thing people use every day. At Pragati Defence I designed and built the company's ERP from scratch: the schema, auth, APIs and the screens people now work in. Before that, three years at ZS Associates doing the same at team scale: re-architecting services, building dashboards and mentoring junior developers.",
   email: "adamyabansal@gmail.com",
   resume: "/adamya-agrawal-resume.pdf",
   links: [
@@ -48,7 +48,7 @@ export const career: Commit[] = [
     period: "Jun 2026 - Present",
     head: true,
     bullets: [
-      "Architected and developed an end-to-end ERP platform, digitizing **8 business modules** and replacing Excel-based workflows with centralized, role-based systems used by **10+ users** and supporting **100+ business transactions**.",
+      "Architected and developed an end-to-end ERP platform, digitizing **8 business modules** and replacing Excel-based workflows with centralized, role-based systems supporting **100+ business transactions**.",
       "Modernized the company's digital platform by migrating its business-facing website from WordPress to Next.js, while independently designing and implementing the production ERP backend using Node.js, Express.js and PostgreSQL, with JWT authentication, database-backed sessions, RBAC and API security controls.",
     ],
   },
@@ -57,9 +57,9 @@ export const career: Commit[] = [
     org: "ZS Associates",
     period: "Jan 2026 - Jun 2026",
     bullets: [
-      "Led a team of **6 engineers** delivering end-to-end features, coordinating technical execution, code quality and delivery priorities while improving team productivity by **25%**.",
-      "Designed and implemented an LLM observability and analytics solution integrating GCP model telemetry with a React dashboard, aggregating usage, token, latency, request and performance metrics to give senior leadership centralized visibility into model behavior and consumption.",
-      "Mentored junior developers in Angular, Node.js and RESTful API integration and clean coding practices, contributing to **30%** fewer bugs and **20%** faster development cycles.",
+      "Designed and implemented an LLM observability and analytics solution integrating GCP model telemetry with a React dashboard, aggregating usage, token, latency, request and performance metrics to provide centralized visibility into model behavior and consumption.",
+      "Worked with clients and cross-functional teams (data, engineering) using Agile to gather requirements, design scalable solutions and run sprints, prioritizing tasks and improving workflows to deliver features on time.",
+      "Mentored junior developers in Angular, Node.js, RESTful API integration and clean coding practices, contributing to **30%** fewer bugs and **20%** faster development cycles.",
     ],
   },
   {
@@ -67,11 +67,11 @@ export const career: Commit[] = [
     org: "ZS Associates",
     period: "Aug 2023 - Dec 2025",
     bullets: [
-      "Re-architected a MySQL-based weekly batch scheduler into a Node.js microservice with RESTful APIs and event-driven processing, eliminating redundant temporary-table workflows and cutting processing time by **97.5%**.",
-      "Redesigned an Angular data-table interface with advanced search, filtering and multi-metric views, contributing to **40%** more user engagement.",
+      "Re-architected the Sensitivity Analysis module end to end using Angular, Node.js and Express, with interdependent metric filters and backend-driven grid generation. Replaced hardcoded calculations with a configuration-driven approach built on database-stored formulas, metric mappings, parameters and calculation order.",
+      "Re-architected a MySQL-based weekly batch scheduler into a Node.js microservice with RESTful APIs and event-driven processing, eliminating redundant temporary-table workflows and cutting processing time by **98%**.",
+      "Built a responsive React dashboard with advanced filtering, improving user task efficiency by **35%** and tightening data security through controlled access and permission-based routing.",
+      "Redesigned an Angular data-table dashboard with advanced search, filtering and multi-metric views, improving usability and increasing user engagement.",
       "Optimized MySQL queries and schemas with indexing and partitioning, cutting query execution time by **20%** for frequently accessed workflows.",
-      "Built a responsive React dashboard with advanced filtering, improving user task efficiency by **35%** and data security by **40%** through controlled access and permission-based routing.",
-      "Worked with clients and cross-functional teams (data, engineering) using Agile to gather requirements, design scalable solutions and run sprints, achieving **25%** higher client satisfaction.",
     ],
   },
   {
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     slug: "portfolio",
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     bullets: [
-      "A static Next.js page styled as a terminal session: career as a git log graph, and a tmux-style.",
+      "A static Next.js page styled as a terminal session: career as a git log graph, and a tmux-style status bar for navigation.",
       "All content lives in one typed data file. Light and dark themes, works down to phone width.",
     ],
   },
@@ -100,10 +100,10 @@ export const projects: Project[] = [
     slug: "air-fly",
     url: "https://fly.mrmobu.me/",
     host: "fly.mrmobu.me",
-    stack: ["React", "NestJS", "PostgreSQL", "Supabase", "Tailwind"],
+    stack: ["React", "NestJS", "PostgreSQL", "Supabase", "Tailwind CSS"],
     bullets: [
-      "Flight booking system with Supabase auth, user profiles, booking history and an analytics tab for booked flights, passenger details and usage statistics.",
-      "Flight search with advanced filters, real-time seat updates over SSE, and automated email + PDF confirmation once a booking completes.",
+      "Full-stack flight booking platform on React, NestJS and Supabase (Auth + PostgreSQL), with flight search, user profiles, booking history and an analytics dashboard for booking and passenger insights.",
+      "Real-time seat availability over Server-Sent Events (SSE), advanced flight filtering, and automated booking confirmations with email notifications and PDF tickets.",
     ],
   },
   {
@@ -112,13 +112,12 @@ export const projects: Project[] = [
     slug: "msgames",
     url: "https://msgames.in/simulation-platform/onion-dilemma",
     host: "msgames.in",
-    stack: ["React", "Node.js", "MongoDB", "WebSockets", "Tailwind"],
+    stack: ["React", "Node.js", "MongoDB", "Socket.IO", "Tailwind CSS"],
     bullets: [
-      "Two-player management simulation built on the Prisoner's Dilemma, with WebSockets for real-time multiplayer play.",
-      "Role-based gameplay with synchronized timers, automatic bot assignment for odd-numbered groups, and dashboards tracking individual and class-wide results for students and instructors.",
+      "Real-time, two-player Prisoner's Dilemma simulation with synchronized multiplayer play over Socket.IO and persistent game sessions.",
+      "Role-based gameplay with synchronized timers, automatic bot assignment for odd-numbered groups, and student and instructor dashboards tracking individual and aggregate game statistics.",
     ],
   },
-
 ];
 
 export const stack: { key: string; items: string[] }[] = [
@@ -131,7 +130,7 @@ export const stack: { key: string; items: string[] }[] = [
 ];
 
 export const achievements: { date: string; text: string }[] = [
-  { date: "2024-2026", text: "Best Employee of the Cycle at ZS Associates, **5 times**." },
+  { date: "2024-2026", text: "Best Employee of the Cycle at ZS Associates, **4 times**." },
   { date: "2025-04", text: "**2nd place** in the company-wide App-a-thon hackathon." },
   { date: "ongoing", text: "**500+** DSA problems solved across LeetCode, Coding Ninjas and GFG." },
 ];

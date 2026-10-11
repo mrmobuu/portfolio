@@ -41,7 +41,7 @@ All text on the site comes from one file: [`src/data/resume.ts`](src/data/resume
 | `achievements` | Achievements log                                               |
 | `windows`      | Section ids and labels, in order (nav, shortcuts, 404 links)  |
 
-Wrap a number in `**double asterisks**` to highlight it in amber, e.g. `cutting processing time by **97.5%**`. Keep highlights to metrics so they stand out on a skim.
+Wrap a number in `**double asterisks**` to highlight it in amber, e.g. `cutting processing time by **98%**`. Keep highlights to metrics so they stand out on a skim.
 
 To update the downloadable resume, replace `public/adamya-agrawal-resume.pdf`.
 

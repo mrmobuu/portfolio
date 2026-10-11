@@ -31,7 +31,7 @@ Single-page personal portfolio for Adamya Agrawal, styled as a terminal session.
 
 - **Server Components by default.** Only `StatusBar`, `ThemeToggle`, `CurrentPath`, `error.tsx` and `global-error.tsx` are client components. Keep it that way unless interactivity requires otherwise.
 - **Never import plain values from a `"use client"` file into a Server Component.** They arrive as client references, not values (e.g. `.map is not a function` at build time). Shared data goes in `src/data/` or a non-client module like `src/components/theme.ts`.
-- **Highlights:** `**text**` in content renders through `Rich.tsx` as amber mono. Use it for metrics only (`**97.5%**`, `**6 engineers**`), not for whole phrases or tech names.
+- **Highlights:** `**text**` in content renders through `Rich.tsx` as amber mono. Use it for metrics only (`**98%**`, `**8 business modules**`), not for whole phrases or tech names.
 - **Error boundaries:** in this Next.js version, `error.tsx` and `global-error.tsx` receive `retry()` (not the old `reset()`).
 - **Copy:** plain, specific, sentence case. Buttons name the action ("Download resume (PDF)", "Email me"). Every claim must be traceable to the resume. No em dashes; use a plain hyphen.
 - **Accessibility:** decorative glyphs (`$`, `*`, `+`, graph nodes) get `aria-hidden`. Keep visible focus rings, AA contrast in both themes, and respect `prefers-reduced-motion`.
