@@ -30,13 +30,21 @@ export const profile = {
   email: "adamyabansal@gmail.com",
   resume: "/adamya-agrawal-resume.pdf",
   links: [
-    { label: "GitHub", url: "https://github.com/mrmobuu", text: "github.com/mrmobuu" },
+    {
+      label: "GitHub",
+      url: "https://github.com/mrmobuu",
+      text: "github.com/mrmobuu",
+    },
     {
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/adamya-agrawal-555530190/",
       text: "linkedin.com/in/adamya-agrawal",
     },
-    { label: "LeetCode", url: "https://leetcode.com/u/mrmobuu/", text: "leetcode.com/u/mrmobuu" },
+    {
+      label: "LeetCode",
+      url: "https://leetcode.com/u/mrmobuu/",
+      text: "leetcode.com/u/mrmobuu",
+    },
   ],
 };
 
@@ -121,18 +129,36 @@ export const projects: Project[] = [
 ];
 
 export const stack: { key: string; items: string[] }[] = [
-  { key: "languages", items: ["JavaScript", "TypeScript", "C++", "Python", "SQL", "Java"] },
+  {
+    key: "languages",
+    items: ["JavaScript", "TypeScript", "C++", "Python", "SQL", "Java"],
+  },
   { key: "frontend", items: ["Angular", "React", "Next.js", "Tailwind CSS"] },
-  { key: "backend", items: ["Node.js", "Express.js", "NestJS", "REST APIs", "Microservices"] },
+  {
+    key: "backend",
+    items: ["Node.js", "Express.js", "NestJS", "REST APIs", "Microservices"],
+  },
   { key: "databases", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
   { key: "cloud_devops", items: ["AWS", "Docker", "CI/CD", "Git", "GitHub"] },
-  { key: "concepts", items: ["Data Structures & Algorithms", "OOP", "Distributed Systems"] },
+  {
+    key: "concepts",
+    items: ["Data Structures & Algorithms", "OOP", "Distributed Systems"],
+  },
 ];
 
 export const achievements: { date: string; text: string }[] = [
-  { date: "2024-2026", text: "Best Employee of the Cycle at ZS Associates, **4 times**." },
-  { date: "2025-04", text: "**2nd place** in the company-wide App-a-thon hackathon." },
-  { date: "ongoing", text: "**500+** DSA problems solved across LeetCode, Coding Ninjas and GFG." },
+  {
+    date: "2024-2026",
+    text: "Best Employee of the Cycle at ZS Associates, **5 times**.",
+  },
+  {
+    date: "2025-04",
+    text: "**2nd place** in the company-wide App-a-thon hackathon.",
+  },
+  {
+    date: "ongoing",
+    text: "**500+** DSA problems solved across LeetCode, Coding Ninjas and GFG.",
+  },
 ];
 
 // Page sections, in order. Shared by the status bar (nav + 0-5 shortcuts) and the 404 page.
