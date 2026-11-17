@@ -6,7 +6,6 @@ import { windows } from "@/data/resume";
 
 export const metadata: Metadata = {
   title: "Page not found",
-  robots: { index: false },
 };
 
 export default function NotFound() {

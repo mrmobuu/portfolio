@@ -22,20 +22,25 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
-const description = `${profile.name} is a ${profile.role.toLowerCase()} building ERP systems, React and Angular dashboards, and Node.js services.`;
+const title = `${profile.name} - ${profile.role}`;
+const description = `${profile.name} is a ${profile.role.toLowerCase()} building ERP systems, React and Angular dashboards, and Node.js services. Technical Consultant at Pragati Defence, previously at ZS Associates.`;
 
 export const metadata: Metadata = {
-  title: `${profile.name} - ${profile.role}`,
+  metadataBase: new URL(profile.url),
+  title: { default: title, template: `%s | ${profile.name}` },
   description,
-  authors: [{ name: profile.name }],
+  authors: [{ name: profile.name, url: profile.url }],
   openGraph: {
     type: "profile",
-    title: `${profile.name} - ${profile.role}`,
+    url: "/",
+    siteName: profile.name,
+    locale: "en_US",
+    title,
     description,
     firstName: "Adamya",
     lastName: "Agrawal",
   },
-  twitter: { card: "summary", title: profile.name, description },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export const viewport: Viewport = {

@@ -5,17 +5,53 @@ import { Hero } from "@/components/Hero";
 import { Projects } from "@/components/Projects";
 import { Stack } from "@/components/Stack";
 import { StatusBar } from "@/components/StatusBar";
-import { profile } from "@/data/resume";
+import type { Metadata } from "next";
+import { profile, stack } from "@/data/resume";
 
-const personSchema = {
+// Canonical lives here, not in the layout, so the noindex 404 page doesn't inherit it.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+const ids = {
+  website: `${profile.url}/#website`,
+  page: `${profile.url}/#profile`,
+  person: `${profile.url}/#person`,
+};
+
+// WebSite feeds Google's site name; ProfilePage + Person describe the visible page.
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: profile.name,
-  jobTitle: profile.role,
-  email: `mailto:${profile.email}`,
-  alumniOf: { "@type": "CollegeOrUniversity", name: "National Institute of Technology, Raipur" },
-  worksFor: { "@type": "Organization", name: "Pragati Defence" },
-  sameAs: profile.links.map((l) => l.url),
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": ids.website,
+      url: profile.url,
+      name: profile.name,
+      inLanguage: "en",
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": ids.page,
+      url: profile.url,
+      name: `${profile.name} - ${profile.role}`,
+      isPartOf: { "@id": ids.website },
+      mainEntity: { "@id": ids.person },
+    },
+    {
+      "@type": "Person",
+      "@id": ids.person,
+      name: profile.name,
+      url: profile.url,
+      jobTitle: profile.role,
+      description: profile.summary,
+      email: `mailto:${profile.email}`,
+      alumniOf: { "@type": "CollegeOrUniversity", name: "National Institute of Technology, Raipur" },
+      worksFor: { "@type": "Organization", name: "Pragati Defence" },
+      knowsAbout: stack.flatMap((group) => group.items),
+      sameAs: profile.links.map((l) => l.url),
+    },
+  ],
 };
 
 export default function Home() {
@@ -41,7 +77,10 @@ export default function Home() {
       </main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        // Escape "<" so content can never close the script tag early.
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
       />
     </>
   );

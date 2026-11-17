@@ -27,6 +27,8 @@ export const profile = {
   role: "Full-stack engineer",
   summary:
     "I build products end to end, from the first design decision to the thing people use every day. At Pragati Defence I designed and built the company's ERP from scratch: the schema, auth, APIs and the screens people now work in. Before that, three years at ZS Associates doing the same at team scale: re-architecting services, building dashboards and mentoring junior developers.",
+  // Canonical public origin, no trailing slash. Used for metadata, sitemap and robots.txt.
+  url: "https://www.mrmobu.me",
   email: "adamyabansal@gmail.com",
   resume: "/adamya-agrawal-resume.pdf",
   links: [
