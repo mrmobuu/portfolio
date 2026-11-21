@@ -22,13 +22,22 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
-const title = `${profile.name} - ${profile.role}`;
+const title = `${profile.name} (${profile.nickname}) - ${profile.role}`;
 const description = `${profile.name} is a ${profile.role.toLowerCase()} building ERP systems, React and Angular dashboards, and Node.js services. Technical Consultant at Pragati Defence, previously at ZS Associates.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(profile.url),
   title: { default: title, template: `%s | ${profile.name}` },
   description,
+  keywords: [
+    profile.name,
+    ...profile.aliases,
+    profile.role,
+    "software engineer",
+    "Pragati Defence",
+    "ZS Associates",
+    "NIT Raipur",
+  ],
   authors: [{ name: profile.name, url: profile.url }],
   openGraph: {
     type: "profile",
@@ -37,8 +46,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     title,
     description,
-    firstName: "Adamya",
-    lastName: "Agrawal",
+    firstName: profile.givenName,
+    lastName: profile.familyName,
   },
   twitter: { card: "summary_large_image", title, description },
 };

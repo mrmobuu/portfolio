@@ -23,6 +23,10 @@ export type Project = {
 
 export const profile = {
   name: "Adamya Agrawal",
+  givenName: "Adamya",
+  familyName: "Agrawal",
+  // Shown in the page title and next to the name in the hero, so searches for it match visible text.
+  nickname: "Mobu",
   handle: "adamya",
   role: "Full-stack engineer",
   summary:
@@ -31,6 +35,17 @@ export const profile = {
   url: "https://www.mrmobu.me",
   email: "adamyabansal@gmail.com",
   resume: "/adamya-agrawal-resume.pdf",
+  // Other names people search for: nickname, handles and common spellings of the surname.
+  // Feeds the keywords meta tag and Person.alternateName in the JSON-LD.
+  aliases: [
+    "Adamya",
+    "Mobu",
+    "Mr Mobu",
+    "mrmobu",
+    "mrmobuu",
+    "Adamya Aggarwal",
+    "Adamya Agarwal",
+  ],
   links: [
     {
       label: "GitHub",

@@ -28,7 +28,10 @@ export function Hero() {
           ))}
         </h1>
 
-        <p className="mt-6 font-mono text-sm text-amber">{profile.role}</p>
+        <p className="mt-3 font-mono text-sm text-muted">
+          <span aria-hidden># </span>aka {profile.nickname.toLowerCase()}
+        </p>
+        <p className="mt-4 font-mono text-sm text-amber">{profile.role}</p>
         <p className="mt-3 max-w-[56ch] text-[1.05rem] leading-relaxed">
           {profile.summary}
           <span aria-hidden className="cursor" />
