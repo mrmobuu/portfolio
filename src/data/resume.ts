@@ -28,6 +28,8 @@ export const profile = {
   // Shown in the page title and next to the name in the hero, so searches for it match visible text.
   nickname: "Mobu",
   handle: "adamya",
+  // X (Twitter) handle, used for the twitter:creator card tag.
+  xHandle: "@MrM0bu",
   role: "Full-stack engineer",
   summary:
     "I build products end to end, from the first design decision to the thing people use every day. At Pragati Defence I designed and built the company's ERP from scratch: the schema, auth, APIs and the screens people now work in. Before that, three years at ZS Associates doing the same at team scale: re-architecting services, building dashboards and mentoring junior developers.",
@@ -43,6 +45,7 @@ export const profile = {
     "Mr Mobu",
     "mrmobu",
     "mrmobuu",
+    "MrM0bu",
     "Adamya Aggarwal",
     "Adamya Agarwal",
   ],
@@ -56,6 +59,11 @@ export const profile = {
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/adamya-agrawal-555530190/",
       text: "linkedin.com/in/adamya-agrawal",
+    },
+    {
+      label: "X",
+      url: "https://x.com/MrM0bu",
+      text: "x.com/MrM0bu",
     },
     {
       label: "LeetCode",
